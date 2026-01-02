@@ -31,6 +31,10 @@ app.use(
 );
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.status(200).send("Backend is running successfully 🚀");
+});
+
 app.use("/api/contacts", contactRoutes);
 
 app.listen(5000, () =>
